@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2016",
+    "jsx": "preserve",
+    "baseUrl": "./src",
+    "checkJs": true,
+    "paths": {
+      "@components/*": ["components/*"],
+      "@assets/*": ["assets/*"],
+      "@utils/*": ["utils/*"],
+      "@styles/*": ["styles/*"],
+      "@mui/*": ["node_modules/@mui/material/*"]
+    }
+  },
+  "exclude": ["node_modules", "**/node_modules/*"]
+}

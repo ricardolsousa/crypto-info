@@ -18,6 +18,7 @@ export const cryptoApi = createApi({
   baseQuery: axiosBaseQuery({ baseUrl }),
   endpoints: (builder) => ({
     getCoins: builder.query({
+      // @ts-ignore
       query: () => createRequest("/coins"),
     }),
   }),
