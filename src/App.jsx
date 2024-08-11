@@ -1,4 +1,5 @@
 import { useTheme } from "@mui/material";
+import CryptoCurrencies from "pages/crypto-currencies/CryptoCurrencies";
 import Homepage from "pages/homepage/Homepage";
 import { Route, Routes } from "react-router-dom";
 import PublicRoute from "routes/PublicRoute";
@@ -15,6 +16,10 @@ function App() {
     >
       <Routes>
         <Route path="/" element={<PublicRoute element={<Homepage />} />} />
+        <Route
+          path="/cryptocurrencies"
+          element={<PublicRoute element={<CryptoCurrencies />} />}
+        />
       </Routes>
     </div>
   );

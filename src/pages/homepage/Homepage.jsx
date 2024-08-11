@@ -34,7 +34,7 @@ const Homepage = ({ classes }) => {
       <h1 className={classes.title}>Cryptocurrency Stats</h1>
       <div>
         <Grid container rowSpacing={2} columnSpacing={{ xs: 2, sm: 2, md: 3 }}>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
             <StatisticCard
               icon={
                 <CurrencyBitcoinIcon
@@ -48,7 +48,7 @@ const Homepage = ({ classes }) => {
               content={globalStats?.totalCoins}
             />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
             <StatisticCard
               icon={
                 <StoreIcon
@@ -62,7 +62,7 @@ const Homepage = ({ classes }) => {
               content={globalStats?.totalMarkets}
             />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
             <StatisticCard
               icon={
                 <CurrencyExchangeIcon
@@ -76,7 +76,7 @@ const Homepage = ({ classes }) => {
               content={globalStats?.totalExchanges}
             />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
             <StatisticCard
               icon={
                 <TrendingUpIcon
@@ -97,7 +97,7 @@ const Homepage = ({ classes }) => {
           marginTop: "16px",
         }}
       >
-        <h1 className={classes.title}>List of 10 best coins</h1>
+        <h1 className={classes.title}>List of 10 best crypto currencies</h1>
         <CryptoCurrenciesList cryptos={cryptos} />
       </div>
     </div>
