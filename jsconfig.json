@@ -6,7 +6,7 @@
     "baseUrl": "./src",
     "checkJs": true,
     "paths": {
-      "@components/*": ["components/*"],
+      "@components/*": ["src/components/*"],
       "@assets/*": ["assets/*"],
       "@utils/*": ["utils/*"],
       "@styles/*": ["styles/*"],
