@@ -1,4 +1,5 @@
 import { useTheme } from "@mui/material";
+import Navbar from "components/navbar/Navbar";
 import CryptoCurrencies from "pages/crypto-currencies/CryptoCurrencies";
 import Homepage from "pages/homepage/Homepage";
 import { Route, Routes } from "react-router-dom";
@@ -10,17 +11,23 @@ function App() {
     <div
       style={{
         backgroundColor: theme.palette.background.default,
-        padding: "24px 24px",
         minHeight: "calc(100vh - 48px)",
       }}
     >
-      <Routes>
-        <Route path="/" element={<PublicRoute element={<Homepage />} />} />
-        <Route
-          path="/cryptocurrencies"
-          element={<PublicRoute element={<CryptoCurrencies />} />}
-        />
-      </Routes>
+      <Navbar />
+      <div
+        style={{
+          padding: "86px 24px 24px",
+        }}
+      >
+        <Routes>
+          <Route path="/" element={<PublicRoute element={<Homepage />} />} />
+          <Route
+            path="/cryptocurrencies"
+            element={<PublicRoute element={<CryptoCurrencies />} />}
+          />
+        </Routes>
+      </div>
     </div>
   );
 }

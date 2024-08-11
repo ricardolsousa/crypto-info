@@ -22,16 +22,16 @@ const Homepage = ({ classes }) => {
     setCryptos(cryptoData?.data?.coins);
   }, [cryptoData]);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <div className={classes.title}>Loading...</div>;
 
   if (error) {
     const errorMessage = JSON.stringify(error);
-    return <div>Error: {errorMessage}</div>;
+    return <div className={classes.title}>Error: {errorMessage}</div>;
   }
 
   return (
     <div>
-      <h1 className={classes.title}>Cryptocurrency Stats</h1>
+      <h1 className={classes.title}>Crypto Currency Stats</h1>
       <div>
         <Grid container rowSpacing={2} columnSpacing={{ xs: 2, sm: 2, md: 3 }}>
           <Grid item xs={12} sm={6} md={4} lg={3}>
@@ -97,7 +97,7 @@ const Homepage = ({ classes }) => {
           marginTop: "16px",
         }}
       >
-        <h1 className={classes.title}>List of 10 best crypto currencies</h1>
+        <h1 className={classes.title}>List Of 10 Best Crypto Currencies</h1>
         <CryptoCurrenciesList cryptos={cryptos} />
       </div>
     </div>
