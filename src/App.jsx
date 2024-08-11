@@ -11,7 +11,7 @@ function App() {
     <div
       style={{
         backgroundColor: theme.palette.background.default,
-        minHeight: "calc(100vh - 48px)",
+        minHeight: "100vh",
       }}
     >
       <Navbar />
