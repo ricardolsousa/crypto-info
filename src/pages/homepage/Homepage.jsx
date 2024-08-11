@@ -5,11 +5,11 @@ import CurrencyBitcoinIcon from "@mui/icons-material/CurrencyBitcoin";
 import StoreIcon from "@mui/icons-material/Store";
 import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
-import CoinCard from "components/cards/coins/CoinCard";
 import { useEffect, useState } from "react";
 import { compose } from "@reduxjs/toolkit";
 import { styles } from "./styles";
 import { withStyles } from "@mui/styles";
+import CryptoCurrenciesList from "components/crypto-currencies-list/CryptoCurrenciesList";
 
 const Homepage = ({ classes }) => {
   const theme = useTheme();
@@ -98,13 +98,7 @@ const Homepage = ({ classes }) => {
         }}
       >
         <h1 className={classes.title}>List of 10 best coins</h1>
-        <Grid container rowSpacing={2} columnSpacing={{ xs: 2, sm: 2, md: 3 }}>
-          {cryptos?.map((coin, index) => (
-            <Grid item xs={3}>
-              <CoinCard coin={coin} index={index} />
-            </Grid>
-          ))}
-        </Grid>
+        <CryptoCurrenciesList cryptos={cryptos} />
       </div>
     </div>
   );

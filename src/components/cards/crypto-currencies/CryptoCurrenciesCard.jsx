@@ -4,7 +4,7 @@ import { styles } from "./styles";
 import { withStyles } from "@mui/styles";
 import { compose } from "@reduxjs/toolkit";
 
-const CoinCard = ({ coin, index, classes }) => {
+const CryptoCurrenciesCard = ({ coin, index, classes }) => {
   const theme = useTheme();
   return (
     <Card
@@ -36,4 +36,4 @@ const CoinCard = ({ coin, index, classes }) => {
   );
 };
 
-export default compose(withStyles(styles))(CoinCard);
+export default compose(withStyles(styles))(CryptoCurrenciesCard);
