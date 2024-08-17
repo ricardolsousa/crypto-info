@@ -3,12 +3,20 @@ import millify from "millify";
 import { styles } from "./styles";
 import { withStyles } from "@mui/styles";
 import { compose } from "@reduxjs/toolkit";
+import { useNavigate } from "react-router-dom";
 
 const CryptoCurrenciesCard = ({ coin, index, classes }) => {
   const theme = useTheme();
+  const navigate = useNavigate();
+
   return (
     <Card
-      style={{ color: `${theme.palette.background.paper}`, height: "220px" }}
+      onClick={() => navigate(`/cryptocurrencies/${coin.uuid}`)}
+      style={{
+        color: `${theme.palette.background.paper}`,
+        height: "220px",
+        cursor: "pointer",
+      }}
     >
       <CardContent className={classes.cardContainer}>
         <Box className={classes.headerContainer}>
