@@ -28,7 +28,7 @@ function App() {
             element={<PublicRoute element={<CryptoCurrencies />} />}
           />
           <Route
-            path="/cryptocurrencies/:uuid"
+            path="/cryptocurrencies/:cryptocurrencyId"
             element={<PublicRoute element={<CryptoCurrencyDetails />} />}
           />
         </Routes>

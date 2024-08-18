@@ -21,9 +21,13 @@ export const cryptoApi = createApi({
       // @ts-ignore
       query: (count) => createRequest(`/coins?limit=${count}`),
     }),
+    getCoin: builder.query({
+      // @ts-ignore
+      query: (uuid) => createRequest(`/coin/${uuid}`),
+    }),
   }),
 });
 
 // Export hooks for usage in function components, which are
 // auto-generated based on the defined endpoints
-export const { useGetCoinsQuery } = cryptoApi;
+export const { useGetCoinsQuery, useGetCoinQuery } = cryptoApi;
